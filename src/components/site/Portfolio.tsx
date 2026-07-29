@@ -33,7 +33,7 @@ export function Portfolio() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
-                className="group overflow-hidden rounded-2xl border border-border bg-card"
+                className="group overflow-hidden rounded-2xl border border-border bg-card transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1.5 hover:border-foreground/40 hover:shadow-elevated focus-within:-translate-y-1.5 focus-within:border-foreground/40 focus-within:shadow-elevated motion-reduce:hover:translate-y-0 motion-reduce:focus-within:translate-y-0"
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-foreground">
                   <span className="absolute left-4 top-4 z-10 rounded-full border border-background/20 bg-background/90 px-2.5 py-1 text-[11px] font-medium text-foreground">
@@ -49,7 +49,7 @@ export function Portfolio() {
                         height={1000}
                         loading="lazy"
                         decoding="async"
-                        className="h-full w-full object-cover object-left-top"
+                        className="h-full w-full object-cover object-left-top transition-transform duration-[450ms] ease-out will-change-transform group-hover:scale-[1.05] group-focus-within:scale-[1.05] motion-reduce:transform-none motion-reduce:group-hover:scale-100"
                       />
                     </picture>
                   ) : (
