@@ -223,32 +223,51 @@
   "pricing": {
     "eyebrow": "Planos de manutenção",
     "title": "Seu site sempre no ar, sem dor de cabeça.",
-    "subtitle": "Planos mensais opcionais para hospedagem, backups e evolução contínua.",
+    "subtitle": "Acompanhamento técnico contínuo para sites desenvolvidos pela Arkyo.",
     "recommended": "Recomendado",
     "cta": "Contratar plano",
-    "perMonth": "/mês",
+    "perMonth": "por 30 dias",
+    "scopeNote": "Planos disponíveis exclusivamente para sites desenvolvidos pela Arkyo. Cada contratação cobre 30 dias de acompanhamento técnico e pode ser renovada ao final do período.",
+    "hostingNote": "A hospedagem, o domínio e eventuais serviços externos são contratados e pagos diretamente pelo cliente. A Arkyo realiza a configuração e o acompanhamento técnico na Hostinger.",
+    "fineprint": "Pequenos ajustes incluem alterações de textos, imagens, links, telefones, horários e informações em páginas já existentes. Novas páginas, funcionalidades, integrações, automações, reformulações ou alterações estruturais recebem orçamento separado. O tempo não utilizado não é acumulado para o próximo período.",
     "plans": {
       "essencial": {
         "name": "Essencial",
-        "description": "Manutenção básica para manter seu site sempre no ar.",
+        "description": "Para manter o site estável, atualizado e funcionando corretamente.",
         "features": [
-          "Hospedagem e domínio",
-          "Certificado SSL",
-          "Backup mensal",
+          "Gestão técnica da hospedagem na Hostinger",
+          "Verificação mensal do funcionamento do site",
+          "Verificação do certificado SSL",
+          "Conferência dos backups disponíveis",
           "Suporte por email",
-          "Pequenos ajustes de conteúdo"
+          "Um pequeno ajuste de conteúdo por ciclo",
+          "Prazo de resposta de até 3 dias úteis"
         ]
       },
       "profissional": {
         "name": "Profissional",
-        "description": "Suporte completo com evolução contínua do seu site.",
+        "description": "Para negócios que precisam de acompanhamento mais próximo.",
         "features": [
           "Tudo do Essencial",
-          "Backup semanal",
-          "Atualizações prioritárias",
-          "Suporte WhatsApp",
-          "Relatório mensal de performance",
-          "Otimizações de SEO"
+          "Verificação semanal do funcionamento",
+          "Teste dos formulários e links principais",
+          "Suporte pelo WhatsApp",
+          "Até 1 hora de pequenos ajustes por ciclo",
+          "Verificação básica de desempenho e SEO",
+          "Prazo de resposta de até 2 dias úteis"
+        ]
+      },
+      "evolucao": {
+        "name": "Evolução",
+        "description": "Para negócios que desejam manter e melhorar o site continuamente.",
+        "features": [
+          "Tudo do Profissional",
+          "Atendimento prioritário",
+          "Verificação de formulários e integrações",
+          "Até 2 horas de melhorias por ciclo",
+          "Otimizações básicas de desempenho e SEO",
+          "Relatório resumido do período",
+          "Prazo de resposta de até 1 dia útil"
         ]
       }
     }

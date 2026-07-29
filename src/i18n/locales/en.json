@@ -223,32 +223,51 @@
   "pricing": {
     "eyebrow": "Maintenance plans",
     "title": "Your site always online, with no headaches.",
-    "subtitle": "Optional monthly plans for hosting, backups and continuous improvement.",
+    "subtitle": "Continuous technical care for websites built by Arkyo.",
     "recommended": "Recommended",
     "cta": "Choose plan",
-    "perMonth": "/mo",
+    "perMonth": "per 30 days",
+    "scopeNote": "Plans are available exclusively for websites built by Arkyo. Each subscription covers 30 days of technical care and can be renewed at the end of the period.",
+    "hostingNote": "Hosting, domain and any external services are contracted and paid directly by the client. Arkyo handles the setup and technical follow-up on Hostinger.",
+    "fineprint": "Small edits include changes to texts, images, links, phone numbers, opening hours and information on existing pages. New pages, features, integrations, automations, redesigns or structural changes are quoted separately. Unused time does not carry over to the next period.",
     "plans": {
       "essencial": {
         "name": "Essential",
-        "description": "Basic maintenance to keep your site always online.",
+        "description": "To keep the site stable, up to date and running correctly.",
         "features": [
-          "Hosting and domain",
-          "SSL certificate",
-          "Monthly backup",
+          "Technical management of Hostinger hosting",
+          "Monthly check of the site's operation",
+          "SSL certificate check",
+          "Review of available backups",
           "Email support",
-          "Small content edits"
+          "One small content edit per cycle",
+          "Response time up to 3 business days"
         ]
       },
       "profissional": {
         "name": "Professional",
-        "description": "Full support with continuous evolution of your site.",
+        "description": "For businesses that need closer follow-up.",
         "features": [
           "Everything in Essential",
-          "Weekly backup",
-          "Priority updates",
+          "Weekly operation check",
+          "Testing of forms and key links",
           "WhatsApp support",
-          "Monthly performance report",
-          "SEO optimisations"
+          "Up to 1 hour of small edits per cycle",
+          "Basic performance and SEO check",
+          "Response time up to 2 business days"
+        ]
+      },
+      "evolucao": {
+        "name": "Evolution",
+        "description": "For businesses that want to maintain and improve the site continuously.",
+        "features": [
+          "Everything in Professional",
+          "Priority support",
+          "Check of forms and integrations",
+          "Up to 2 hours of improvements per cycle",
+          "Basic performance and SEO optimisations",
+          "Summary report for the period",
+          "Response time up to 1 business day"
         ]
       }
     }
