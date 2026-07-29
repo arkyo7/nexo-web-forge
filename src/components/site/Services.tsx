@@ -37,7 +37,7 @@ export function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative flex flex-col rounded-2xl border border-border bg-card p-6 transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1.5 hover:border-foreground/40 hover:shadow-soft focus-within:-translate-y-1.5 focus-within:border-foreground/40 focus-within:shadow-soft motion-reduce:hover:translate-y-0 motion-reduce:focus-within:translate-y-0"
+                className="group relative flex flex-col rounded-2xl border border-border bg-card p-6 transition-[transform,box-shadow,border-color] duration-300 ease-out hover-device:hover:-translate-y-1.5 hover-device:hover:border-foreground/40 hover-device:hover:shadow-soft has-[:focus-visible]:-translate-y-1.5 has-[:focus-visible]:border-foreground/40 has-[:focus-visible]:shadow-soft motion-reduce:hover-device:hover:translate-y-0 motion-reduce:has-[:focus-visible]:translate-y-0"
               >
                 <div className="flex items-start justify-between">
                   <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-muted text-foreground">

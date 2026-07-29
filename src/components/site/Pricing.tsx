@@ -7,8 +7,8 @@ import { SectionLink } from "./SectionLink";
 
 const cardInteraction =
   "transition-[transform,box-shadow,border-color] duration-300 ease-out " +
-  "hover:-translate-y-1.5 hover:shadow-elevated focus-within:-translate-y-1.5 focus-within:shadow-elevated " +
-  "motion-reduce:hover:translate-y-0 motion-reduce:focus-within:translate-y-0";
+  "hover-device:hover:-translate-y-1.5 hover-device:hover:shadow-elevated has-[:focus-visible]:-translate-y-1.5 has-[:focus-visible]:shadow-elevated " +
+  "motion-reduce:hover-device:hover:translate-y-0 motion-reduce:has-[:focus-visible]:translate-y-0";
 
 export function Pricing() {
   const { t } = useTranslation();
