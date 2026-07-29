@@ -40,8 +40,8 @@ export function Pricing() {
                   "relative flex h-full flex-col rounded-2xl border bg-card p-7",
                   cardInteraction,
                   p.highlighted
-                    ? "border-foreground shadow-elevated ring-1 ring-foreground hover:border-foreground"
-                    : "border-border hover:border-foreground/40",
+                    ? "border-foreground shadow-elevated ring-1 ring-foreground hover-device:hover:border-foreground"
+                    : "border-border hover-device:hover:border-foreground/40",
                 )}
               >
                 {p.highlighted && (
