@@ -18,10 +18,10 @@ export type ServiceMeta = {
 };
 
 export const services: ServiceMeta[] = [
-  { id: "landing-page", projectType: "landing", price: "€250+", icon: Rocket },
-  { id: "site-institucional", projectType: "institutional", price: "€350+", icon: Building2 },
-  { id: "site-agendamento", projectType: "booking", price: "€450+", icon: CalendarCheck },
+  { id: "landing-page", projectType: "landing", price: "€400+", icon: Rocket },
+  { id: "site-institucional", projectType: "institutional", price: "€500+", icon: Building2 },
+  { id: "site-agendamento", projectType: "booking", price: "€650+", icon: CalendarCheck },
   { id: "portfolio", projectType: "portfolio", price: "€300+", icon: ImageIcon },
-  { id: "pagina-vendas", projectType: "sales", price: "€300+", icon: ShoppingBag },
+  { id: "pagina-vendas", projectType: "sales", price: "€800+", icon: ShoppingBag },
   { id: "personalizado", projectType: "custom", price: "custom", icon: Settings2 },
 ];
