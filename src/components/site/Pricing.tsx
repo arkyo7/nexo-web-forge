@@ -37,29 +37,55 @@ export function Pricing() {
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 className={cn(
-                  "relative flex h-full flex-col rounded-2xl border bg-card p-7",
+                  "relative flex h-full flex-col rounded-2xl border p-7",
                   cardInteraction,
                   p.highlighted
-                    ? "border-foreground shadow-elevated ring-1 ring-foreground hover-device:hover:border-foreground"
-                    : "border-border hover-device:hover:border-foreground/40",
+                    ? "border-foreground bg-foreground text-background shadow-elevated ring-1 ring-foreground hover-device:hover:border-foreground"
+                    : "border-border bg-card hover-device:hover:border-foreground/40",
                 )}
               >
                 {p.highlighted && (
-                  <span className="absolute -top-3 right-6 rounded-full bg-foreground px-3 py-1 text-[11px] font-medium text-background">
+                  <span className="absolute -top-3 right-6 rounded-full bg-background px-3 py-1 text-[11px] font-medium text-foreground ring-1 ring-foreground">
                     {t("pricing.recommended")}
                   </span>
                 )}
                 <h3 className="text-lg font-semibold tracking-tight">{t(`${base}.name`)}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{t(`${base}.description`)}</p>
+                <p
+                  className={cn(
+                    "mt-1 text-sm",
+                    p.highlighted ? "text-background/70" : "text-muted-foreground",
+                  )}
+                >
+                  {t(`${base}.description`)}
+                </p>
                 <div className="mt-5 flex flex-wrap items-baseline gap-x-2 gap-y-1">
                   <span className="text-4xl font-semibold tracking-tight">{p.price}</span>
-                  <span className="text-sm text-muted-foreground">{t("pricing.perMonth")}</span>
+                  <span
+                    className={cn(
+                      "text-sm",
+                      p.highlighted ? "text-background/70" : "text-muted-foreground",
+                    )}
+                  >
+                    {t("pricing.perMonth")}
+                  </span>
                 </div>
-                <ul className="mt-6 flex-1 space-y-3 border-t border-border pt-6">
+                <ul
+                  className={cn(
+                    "mt-6 flex-1 space-y-3 border-t pt-6",
+                    p.highlighted ? "border-background/25" : "border-border",
+                  )}
+                >
                   {features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-foreground" />
-                      <span className="text-foreground">{f}</span>
+                      <Check
+                        className={cn(
+                          "mt-0.5 h-4 w-4 shrink-0",
+                          p.highlighted ? "text-background" : "text-foreground",
+                        )}
+                      />
+                      <span className={p.highlighted ? "text-background" : "text-foreground"}>
+                        {f}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -68,7 +94,7 @@ export function Pricing() {
                   className={cn(
                     "mt-7 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium transition-transform hover:-translate-y-px",
                     p.highlighted
-                      ? "bg-foreground text-background"
+                      ? "bg-background text-foreground"
                       : "border border-foreground text-foreground",
                   )}
                 >
