@@ -3,6 +3,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant hover-device (@media (hover: hover) and (pointer: fine));
 
 @theme inline {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;

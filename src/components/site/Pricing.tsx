@@ -7,8 +7,8 @@ import { SectionLink } from "./SectionLink";
 
 const cardInteraction =
   "transition-[transform,box-shadow,border-color] duration-300 ease-out " +
-  "hover:-translate-y-1.5 hover:shadow-elevated focus-within:-translate-y-1.5 focus-within:shadow-elevated " +
-  "motion-reduce:hover:translate-y-0 motion-reduce:focus-within:translate-y-0";
+  "hover-device:hover:-translate-y-1.5 hover-device:hover:shadow-elevated has-[:focus-visible]:-translate-y-1.5 has-[:focus-visible]:shadow-elevated " +
+  "motion-reduce:hover-device:hover:translate-y-0 motion-reduce:has-[:focus-visible]:translate-y-0";
 
 export function Pricing() {
   const { t } = useTranslation();
@@ -40,8 +40,8 @@ export function Pricing() {
                   "relative flex h-full flex-col rounded-2xl border bg-card p-7",
                   cardInteraction,
                   p.highlighted
-                    ? "border-foreground shadow-elevated ring-1 ring-foreground hover:border-foreground"
-                    : "border-border hover:border-foreground/40",
+                    ? "border-foreground shadow-elevated ring-1 ring-foreground hover-device:hover:border-foreground"
+                    : "border-border hover-device:hover:border-foreground/40",
                 )}
               >
                 {p.highlighted && (
