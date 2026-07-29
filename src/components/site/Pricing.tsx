@@ -5,6 +5,11 @@ import { plans } from "@/data/pricing";
 import { cn } from "@/lib/utils";
 import { SectionLink } from "./SectionLink";
 
+const cardInteraction =
+  "transition-[transform,box-shadow,border-color] duration-300 ease-out " +
+  "hover:-translate-y-1.5 hover:shadow-elevated focus-within:-translate-y-1.5 focus-within:shadow-elevated " +
+  "motion-reduce:hover:translate-y-0 motion-reduce:focus-within:translate-y-0";
+
 export function Pricing() {
   const { t } = useTranslation();
   return (
@@ -20,7 +25,7 @@ export function Pricing() {
           <p className="mt-4 text-muted-foreground">{t("pricing.subtitle")}</p>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-3xl gap-4 md:grid-cols-2">
+        <div className="mx-auto mt-14 grid max-w-5xl items-stretch gap-4 md:grid-cols-3">
           {plans.map((p, i) => {
             const base = `pricing.plans.${p.id}`;
             const features = t(`${base}.features`, { returnObjects: true }) as string[];
@@ -32,48 +37,52 @@ export function Pricing() {
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 className={cn(
-                  "relative flex flex-col rounded-2xl border p-7 transition-shadow",
+                  "relative flex h-full flex-col rounded-2xl border bg-card p-7",
+                  cardInteraction,
                   p.highlighted
-                    ? "border-foreground bg-foreground text-background shadow-elevated"
-                    : "border-border bg-card",
+                    ? "border-foreground shadow-elevated ring-1 ring-foreground hover:border-foreground"
+                    : "border-border hover:border-foreground/40",
                 )}
               >
                 {p.highlighted && (
-                  <span className="absolute -top-3 right-6 rounded-full bg-background px-3 py-1 text-[11px] font-medium text-foreground">
+                  <span className="absolute -top-3 right-6 rounded-full bg-foreground px-3 py-1 text-[11px] font-medium text-background">
                     {t("pricing.recommended")}
                   </span>
                 )}
                 <h3 className="text-lg font-semibold tracking-tight">{t(`${base}.name`)}</h3>
-                <p className={cn("mt-1 text-sm", p.highlighted ? "text-background/70" : "text-muted-foreground")}>
-                  {t(`${base}.description`)}
-                </p>
-                <div className="mt-5 flex items-baseline gap-1">
+                <p className="mt-1 text-sm text-muted-foreground">{t(`${base}.description`)}</p>
+                <div className="mt-5 flex flex-wrap items-baseline gap-x-2 gap-y-1">
                   <span className="text-4xl font-semibold tracking-tight">{p.price}</span>
-                  <span className={cn("text-sm", p.highlighted ? "text-background/60" : "text-muted-foreground")}>
-                    {t("pricing.perMonth")}
-                  </span>
+                  <span className="text-sm text-muted-foreground">{t("pricing.perMonth")}</span>
                 </div>
-                <ul className="mt-6 space-y-3 border-t border-current/10 pt-6">
+                <ul className="mt-6 flex-1 space-y-3 border-t border-border pt-6">
                   {features.map((f) => (
                     <li key={f} className="flex items-start gap-2 text-sm">
-                      <Check className="mt-0.5 h-4 w-4 shrink-0" />
-                      <span className={p.highlighted ? "text-background/90" : "text-foreground"}>{f}</span>
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-foreground" />
+                      <span className="text-foreground">{f}</span>
                     </li>
                   ))}
                 </ul>
-                <SectionLink hash="contato"
-                  
+                <SectionLink
+                  hash="contato"
                   className={cn(
                     "mt-7 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium transition-transform hover:-translate-y-px",
                     p.highlighted
-                      ? "bg-background text-foreground"
+                      ? "bg-foreground text-background"
                       : "border border-foreground text-foreground",
-                  )}>
+                  )}
+                >
                   {t("pricing.cta")}
                 </SectionLink>
               </motion.div>
             );
           })}
+        </div>
+
+        <div className="mx-auto mt-10 max-w-3xl space-y-3 text-center">
+          <p className="text-sm text-muted-foreground">{t("pricing.scopeNote")}</p>
+          <p className="text-sm text-muted-foreground">{t("pricing.hostingNote")}</p>
+          <p className="text-xs leading-relaxed text-muted-foreground">{t("pricing.fineprint")}</p>
         </div>
       </div>
     </section>
