@@ -52,8 +52,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           name: "Arkyo",
-          description:
-            "Desenvolvimento de sites e soluções digitais para pequenos negócios.",
+          description: "Desenvolvimento de sites e soluções digitais para pequenos negócios.",
           url: siteUrl("/"),
           areaServed: "BE",
           address: { "@type": "PostalAddress", addressCountry: "BE" },
@@ -90,4 +89,3 @@ function Index() {
     </div>
   );
 }
-
