@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
-import { ValueProp } from "@/components/site/ValueProp";
 import { Problems } from "@/components/site/Problems";
 import { Services } from "@/components/site/Services";
 import { Process } from "@/components/site/Process";
@@ -34,11 +33,16 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: siteUrl("/") },
+      { property: "og:image", content: siteUrl("/jr-massoterapeuta-home.webp") },
+      { property: "og:image:alt", content: "Projeto de site desenvolvido pela Arkyo" },
+      { property: "og:image:width", content: "1905" },
+      { property: "og:image:height", content: "1079" },
       { name: "twitter:title", content: "Arkyo — Sites que simplificam negócios" },
       {
         name: "twitter:description",
         content: "Estúdio digital sob medida para pequenos negócios.",
       },
+      { name: "twitter:image", content: siteUrl("/jr-massoterapeuta-home.webp") },
     ],
     links: [{ rel: "canonical", href: siteUrl("/") }],
     scripts: [
@@ -48,8 +52,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
           name: "Arkyo",
-          description:
-            "Desenvolvimento de sites e soluções digitais para pequenos negócios.",
+          description: "Desenvolvimento de sites e soluções digitais para pequenos negócios.",
           url: siteUrl("/"),
           areaServed: "BE",
           address: { "@type": "PostalAddress", addressCountry: "BE" },
@@ -70,7 +73,6 @@ function Index() {
       <Header />
       <main>
         <Hero />
-        <ValueProp />
         <Problems />
         <Services />
         <Process />
