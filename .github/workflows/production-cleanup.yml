@@ -1,0 +1,50 @@
+name: Apply production cleanup
+
+on:
+  push:
+    branches: [agent/vercel-production-polish]
+    paths:
+      - .github/workflows/production-cleanup.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Apply scoped cleanup and polish
+        run: bun .github/workflows/production-cleanup.mjs
+
+      - name: Refresh dependencies and lockfile
+        run: bun install
+
+      - name: Format repository
+        run: bun run format
+
+      - name: Verify lint
+        run: bun run lint
+
+      - name: Verify types
+        run: bun run typecheck
+
+      - name: Run tests
+        run: bun run test
+
+      - name: Build Vercel output
+        run: bun run build
+
+      - name: Commit verified result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Prepare Arkyo for Vercel and polish motion"
+          git push
