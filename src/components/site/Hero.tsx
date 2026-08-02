@@ -86,7 +86,6 @@ export function Hero() {
     </section>
   );
 }
-
 function MockCard({ title, value, trend }: { title: string; value: string; trend: string }) {
   return (
     <div className="rounded-xl border border-border bg-surface p-5">
@@ -129,4 +128,3 @@ function ChartMock() {
     </svg>
   );
 }
-
