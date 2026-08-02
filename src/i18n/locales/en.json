@@ -72,56 +72,32 @@
       "landing-page": {
         "name": "Landing Page",
         "description": "Single page focused on conversion for a service, event or launch.",
-        "features": [
-          "Bespoke design",
-          "Integrated form",
-          "SEO-optimised"
-        ]
+        "features": ["Bespoke design", "Integrated form", "SEO-optimised"]
       },
       "site-institucional": {
         "name": "Company Website",
         "description": "Full professional presence to consolidate your brand image.",
-        "features": [
-          "Up to 5 pages",
-          "Optional blog",
-          "Contact panel"
-        ]
+        "features": ["Up to 5 pages", "Optional blog", "Contact panel"]
       },
       "site-agendamento": {
         "name": "Website with Booking",
         "description": "Your own online reservation system, with no dependency on third-party platforms.",
-        "features": [
-          "Integrated calendar",
-          "Automatic confirmations",
-          "Admin panel"
-        ]
+        "features": ["Integrated calendar", "Automatic confirmations", "Admin panel"]
       },
       "portfolio": {
         "name": "Portfolio",
         "description": "Visual showcase for photographers, designers, architects and creatives.",
-        "features": [
-          "Optimised galleries",
-          "Detailed cases",
-          "Direct contact"
-        ]
+        "features": ["Optimised galleries", "Detailed cases", "Direct contact"]
       },
       "pagina-vendas": {
         "name": "Sales Page",
         "description": "Persuasive copywriting structure for digital products and offers.",
-        "features": [
-          "Conversion-driven copy",
-          "Integrated checkout",
-          "Pixel & Analytics"
-        ]
+        "features": ["Conversion-driven copy", "Integrated checkout", "Pixel & Analytics"]
       },
       "personalizado": {
         "name": "Custom Project",
         "description": "Specific solutions, built to measure for your business.",
-        "features": [
-          "Custom scope",
-          "Dedicated consulting",
-          "Ongoing support"
-        ]
+        "features": ["Custom scope", "Dedicated consulting", "Ongoing support"]
       }
     }
   },
@@ -181,11 +157,7 @@
           "Admin dashboard with time-slot control",
           "Automatic notifications for client and practitioner"
         ],
-        "tags": [
-          "Health & Wellness",
-          "Booking",
-          "Corporate"
-        ]
+        "tags": ["Health & Wellness", "Booking", "Corporate"]
       }
     },
     "status": "Project in development"
@@ -526,4 +498,3 @@
     "body": "Arkyo is a Belgium-based digital studio created to help small businesses build a clear, professional and functional online presence. You work directly with the person planning, designing and developing your project, from the first conversation to launch and support."
   }
 }
-

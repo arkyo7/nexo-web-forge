@@ -20,7 +20,11 @@ export function CookieBanner() {
   }, []);
 
   const decide = (value: "accepted" | "rejected") => {
-    try { localStorage.setItem(STORAGE_KEY, value); } catch { /* ignore */ }
+    try {
+      localStorage.setItem(STORAGE_KEY, value);
+    } catch {
+      /* ignore */
+    }
     setVisible(false);
   };
 
@@ -42,7 +46,8 @@ export function CookieBanner() {
               {t("cookies.text")}{" "}
               <a href="/privacidade" className="text-foreground underline underline-offset-4">
                 {t("cookies.privacy")}
-              </a>.
+              </a>
+              .
             </p>
             <div className="flex shrink-0 gap-2">
               <button

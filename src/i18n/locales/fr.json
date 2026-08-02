@@ -72,56 +72,32 @@
       "landing-page": {
         "name": "Landing Page",
         "description": "Page unique orientée conversion pour un service, un événement ou un lancement.",
-        "features": [
-          "Design sur mesure",
-          "Formulaire intégré",
-          "Optimisée SEO"
-        ]
+        "features": ["Design sur mesure", "Formulaire intégré", "Optimisée SEO"]
       },
       "site-institucional": {
         "name": "Site vitrine",
         "description": "Présence professionnelle complète pour consolider l'image de votre entreprise.",
-        "features": [
-          "Jusqu'à 5 pages",
-          "Blog optionnel",
-          "Panneau de contact"
-        ]
+        "features": ["Jusqu'à 5 pages", "Blog optionnel", "Panneau de contact"]
       },
       "site-agendamento": {
         "name": "Site avec réservation",
         "description": "Votre propre système de réservation en ligne, sans dépendre de plateformes tierces.",
-        "features": [
-          "Agenda intégré",
-          "Confirmations automatiques",
-          "Panneau d'administration"
-        ]
+        "features": ["Agenda intégré", "Confirmations automatiques", "Panneau d'administration"]
       },
       "portfolio": {
         "name": "Portfolio",
         "description": "Vitrine visuelle pour photographes, designers, architectes et créatifs.",
-        "features": [
-          "Galeries optimisées",
-          "Cas détaillés",
-          "Contact direct"
-        ]
+        "features": ["Galeries optimisées", "Cas détaillés", "Contact direct"]
       },
       "pagina-vendas": {
         "name": "Page de vente",
         "description": "Structure de copywriting persuasive pour infoproduits et offres.",
-        "features": [
-          "Copy orientée conversion",
-          "Checkout intégré",
-          "Pixel & Analytics"
-        ]
+        "features": ["Copy orientée conversion", "Checkout intégré", "Pixel & Analytics"]
       },
       "personalizado": {
         "name": "Projet personnalisé",
         "description": "Solutions spécifiques, développées sur mesure pour votre entreprise.",
-        "features": [
-          "Périmètre sur mesure",
-          "Consulting dédié",
-          "Support continu"
-        ]
+        "features": ["Périmètre sur mesure", "Consulting dédié", "Support continu"]
       }
     }
   },
@@ -181,11 +157,7 @@
           "Tableau de bord avec contrôle des créneaux",
           "Notifications automatiques client et praticien"
         ],
-        "tags": [
-          "Santé & bien-être",
-          "Réservation",
-          "Vitrine"
-        ]
+        "tags": ["Santé & bien-être", "Réservation", "Vitrine"]
       }
     },
     "status": "Projet en cours de développement"
@@ -526,4 +498,3 @@
     "body": "Arkyo est un studio digital basé en Belgique, créé pour aider les petites entreprises à construire une présence en ligne claire, professionnelle et fonctionnelle. Vous échangez directement avec la personne qui planifie, conçoit et développe votre projet, du premier contact à la mise en ligne et au suivi."
   }
 }
-

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Check } from "lucide-react";
 import { plans } from "@/data/pricing";
 import { cn } from "@/lib/utils";
-import { SectionLink } from "./SectionLink";
+import { whatsappUrl } from "@/data/company";
 
 const cardInteraction =
   "transition-[transform,box-shadow,border-color] duration-300 ease-out " +
@@ -89,8 +89,10 @@ export function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <SectionLink
-                  hash="contato"
+                <a
+                  href={whatsappUrl(t("contact.whatsappMessage"))}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={cn(
                     "mt-7 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium transition-transform hover:-translate-y-px",
                     p.highlighted
@@ -99,7 +101,7 @@ export function Pricing() {
                   )}
                 >
                   {t("pricing.cta")}
-                </SectionLink>
+                </a>
               </motion.div>
             );
           })}
