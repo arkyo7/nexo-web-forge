@@ -5,7 +5,7 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { navItems } from "@/data/company";
+import { navItems, whatsappUrl } from "@/data/company";
 import { cn } from "@/lib/utils";
 import { SectionLink } from "./SectionLink";
 
@@ -104,13 +104,15 @@ export function Header() {
         <div className="hidden items-center gap-2 md:flex">
           <LanguageSwitcher />
           <ThemeToggle />
-          <SectionLink
-            hash="contato"
+          <a
+            href={whatsappUrl(t("contact.whatsappMessage"))}
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-1.5 rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background transition-transform hover:-translate-y-px"
           >
             {t("nav.requestQuote")}
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </SectionLink>
+          </a>
         </div>
         <div className="flex items-center gap-1 md:hidden">
           <LanguageSwitcher />
@@ -179,14 +181,16 @@ export function Header() {
                     {t(`nav.${item.key}`)}
                   </SectionLink>
                 ))}
-                <SectionLink
-                  hash="contato"
+                <a
+                  href={whatsappUrl(t("contact.whatsappMessage"))}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
                   className="mt-4 inline-flex items-center justify-center gap-1.5 rounded-lg bg-foreground px-4 py-3 text-sm font-medium text-background"
                 >
                   {t("nav.requestQuote")}
                   <ArrowUpRight className="h-4 w-4" />
-                </SectionLink>
+                </a>
               </nav>
             </motion.div>
           </div>

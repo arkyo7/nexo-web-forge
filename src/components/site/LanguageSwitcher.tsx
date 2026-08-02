@@ -44,7 +44,9 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
               <span aria-hidden>{languageMeta[lng].flag}</span>
               {languageMeta[lng].label}
             </span>
-            {current === lng && <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-foreground" />}
+            {current === lng && (
+              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-foreground" />
+            )}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

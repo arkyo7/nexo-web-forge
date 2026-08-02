@@ -12,7 +12,6 @@ import { FAQ } from "@/components/site/FAQ";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { CookieBanner } from "@/components/site/CookieBanner";
-import { Toaster } from "@/components/ui/sonner";
 import { SeoLocalized } from "@/components/site/SeoLocalized";
 import { siteUrl } from "@/data/company";
 
@@ -85,7 +84,6 @@ function Index() {
       </main>
       <Footer />
       <CookieBanner />
-      <Toaster position="bottom-center" />
     </div>
   );
 }

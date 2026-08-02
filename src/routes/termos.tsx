@@ -23,7 +23,8 @@ export const Route = createFileRoute("/termos")({
 function Termos() {
   const { t, i18n } = useTranslation();
   const country = t("footer.country");
-  const section = (key: string) => t(`legal.terms.sections.${key}`, { returnObjects: true }) as { title: string; body: string };
+  const section = (key: string) =>
+    t(`legal.terms.sections.${key}`, { returnObjects: true }) as { title: string; body: string };
   const keys = ["accept", "services", "ip", "liability", "changes", "law"];
 
   return (
@@ -32,10 +33,15 @@ function Termos() {
       <Header />
       <main className="pt-32 pb-24">
         <div className="container-arkyo max-w-3xl">
-          <Link to="/" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+          >
             <ArrowLeft className="h-4 w-4" /> {t("legal.back")}
           </Link>
-          <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">{t("legal.terms.title")}</h1>
+          <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">
+            {t("legal.terms.title")}
+          </h1>
           <p className="mt-4 text-sm text-muted-foreground">
             {t("legal.lastUpdate")} {legalUpdatedLabel(i18n.resolvedLanguage)}
           </p>

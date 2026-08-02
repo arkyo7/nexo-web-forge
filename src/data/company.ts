@@ -43,7 +43,6 @@ export function siteUrl(path = "/") {
   return `${SITE_URL}${clean === "/" ? "/" : clean}`;
 }
 
-
 /**
  * Fixed revision date of the legal documents (Terms / Privacy Policy).
  * Change it manually whenever the legal texts are actually revised.

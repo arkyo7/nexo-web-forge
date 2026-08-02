@@ -1,11 +1,10 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
-  Outlet,
-  Link,
-  createRootRouteWithContext,
-  useRouter,
   HeadContent,
+  Link,
+  Outlet,
   Scripts,
+  createRootRoute,
+  useRouter,
 } from "@tanstack/react-router";
 import { MotionConfig } from "framer-motion";
 import { useEffect, type ReactNode } from "react";
@@ -40,6 +39,7 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   const { t } = useTranslation();
   const router = useRouter();
+
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
@@ -73,16 +73,16 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Arkyo — Sites que simplificam negócios" },
+      { title: "Arkyo \u2014 Sites que simplificam neg\u00F3cios" },
       {
         name: "description",
         content:
-          "Estúdio digital que desenvolve sites, landing pages e sistemas de agendamento para pequenos negócios. Bélgica.",
+          "Est\u00FAdio digital que desenvolve sites, landing pages e sistemas de agendamento para pequenos neg\u00F3cios. B\u00E9lgica.",
       },
       { name: "author", content: "Arkyo" },
       { name: "theme-color", content: "#090909" },
@@ -109,7 +109,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    // The inline theme script mutates <html> class/style before hydration.
     <html lang="pt" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
@@ -125,14 +124,11 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function HtmlLangSync() {
   const { i18n: instance } = useTranslation();
+
   useEffect(() => {
-    // Deferred one frame so the whole tree finishes hydrating in the SSR
-    // language before we switch to the visitor's stored/browser language.
     const langTimer = window.setTimeout(syncDetectedLanguage, 0);
     const apply = () => {
-      if (typeof document !== "undefined") {
-        document.documentElement.lang = instance.resolvedLanguage || "pt";
-      }
+      document.documentElement.lang = instance.resolvedLanguage || "pt";
     };
     apply();
     instance.on("languageChanged", apply);
@@ -141,25 +137,19 @@ function HtmlLangSync() {
       instance.off("languageChanged", apply);
     };
   }, [instance]);
+
   return null;
 }
 
 function RootComponent() {
-  const { queryClient } = Route.useRouteContext();
-
   return (
-    <QueryClientProvider client={queryClient}>
-      <I18nextProvider i18n={i18n}>
-        <ThemeProvider>
-          {/* reducedMotion="user" makes every Framer Motion animation honour
-              prefers-reduced-motion: transforms are dropped, opacity kept. */}
-          <MotionConfig reducedMotion="user">
-            <HtmlLangSync />
-            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-            <Outlet />
-          </MotionConfig>
-        </ThemeProvider>
-      </I18nextProvider>
-    </QueryClientProvider>
+    <I18nextProvider i18n={i18n}>
+      <ThemeProvider>
+        <MotionConfig reducedMotion="user">
+          <HtmlLangSync />
+          <Outlet />
+        </MotionConfig>
+      </ThemeProvider>
+    </I18nextProvider>
   );
 }

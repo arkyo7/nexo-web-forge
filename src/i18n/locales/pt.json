@@ -72,56 +72,32 @@
       "landing-page": {
         "name": "Landing Page",
         "description": "Página única focada em conversão para um serviço, evento ou lançamento.",
-        "features": [
-          "Design sob medida",
-          "Formulário integrado",
-          "Otimizada para SEO"
-        ]
+        "features": ["Design sob medida", "Formulário integrado", "Otimizada para SEO"]
       },
       "site-institucional": {
         "name": "Site Institucional",
         "description": "Presença profissional completa para consolidar a imagem do seu negócio.",
-        "features": [
-          "Até 5 páginas",
-          "Blog opcional",
-          "Painel de contato"
-        ]
+        "features": ["Até 5 páginas", "Blog opcional", "Painel de contato"]
       },
       "site-agendamento": {
         "name": "Site com Agendamento",
         "description": "Sistema próprio de reservas online, sem depender de plataformas externas.",
-        "features": [
-          "Agenda integrada",
-          "Confirmações automáticas",
-          "Painel administrativo"
-        ]
+        "features": ["Agenda integrada", "Confirmações automáticas", "Painel administrativo"]
       },
       "portfolio": {
         "name": "Portfólio",
         "description": "Vitrine visual para fotógrafos, designers, arquitetos e criativos.",
-        "features": [
-          "Galerias otimizadas",
-          "Cases detalhados",
-          "Contato direto"
-        ]
+        "features": ["Galerias otimizadas", "Cases detalhados", "Contato direto"]
       },
       "pagina-vendas": {
         "name": "Página de Vendas",
         "description": "Estrutura de copywriting persuasiva para infoprodutos e ofertas.",
-        "features": [
-          "Copy orientada a conversão",
-          "Checkout integrado",
-          "Pixel & Analytics"
-        ]
+        "features": ["Copy orientada a conversão", "Checkout integrado", "Pixel & Analytics"]
       },
       "personalizado": {
         "name": "Projeto Personalizado",
         "description": "Soluções específicas, desenvolvidas sob medida para o seu negócio.",
-        "features": [
-          "Escopo customizado",
-          "Consultoria dedicada",
-          "Suporte contínuo"
-        ]
+        "features": ["Escopo customizado", "Consultoria dedicada", "Suporte contínuo"]
       }
     }
   },
@@ -181,11 +157,7 @@
           "Painel administrativo com controle de horários",
           "Notificações automáticas para cliente e profissional"
         ],
-        "tags": [
-          "Saúde & Bem-estar",
-          "Agendamento",
-          "Institucional"
-        ]
+        "tags": ["Saúde & Bem-estar", "Agendamento", "Institucional"]
       }
     },
     "status": "Projeto em desenvolvimento"
@@ -526,4 +498,3 @@
     "body": "A Arkyo é um estúdio digital na Bélgica criado para ajudar pequenos negócios a construir uma presença online clara, profissional e funcional. Você fala diretamente com quem planeja, desenha e desenvolve o projeto, da primeira conversa à publicação e ao suporte."
   }
 }
-

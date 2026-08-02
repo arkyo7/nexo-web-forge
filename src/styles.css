@@ -1,6 +1,5 @@
 @import "tailwindcss" source(none);
 @source "../src";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 @custom-variant hover-device (@media (hover: hover) and (pointer: fine));
@@ -44,26 +43,26 @@
 :root {
   color-scheme: light;
   /* Arkyo — Light */
-  --background: #FAFAFA;
+  --background: #fafafa;
   --foreground: #171717;
-  --surface: #F5F5F5;
-  --surface-2: #EFEFEF;
-  --card: #FFFFFF;
+  --surface: #f5f5f5;
+  --surface-2: #efefef;
+  --card: #ffffff;
   --card-foreground: #171717;
-  --popover: #FFFFFF;
+  --popover: #ffffff;
   --popover-foreground: #171717;
   --primary: #171717;
-  --primary-foreground: #FAFAFA;
-  --secondary: #F5F5F5;
+  --primary-foreground: #fafafa;
+  --secondary: #f5f5f5;
   --secondary-foreground: #171717;
-  --muted: #F5F5F5;
+  --muted: #f5f5f5;
   --muted-foreground: #525252;
-  --accent: #F5F5F5;
+  --accent: #f5f5f5;
   --accent-foreground: #171717;
   --destructive: oklch(0.55 0.22 27);
-  --destructive-foreground: #FFFFFF;
-  --border: #E5E5E5;
-  --input: #E5E5E5;
+  --destructive-foreground: #ffffff;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
   --ring: #171717;
   --radius: 10px;
 }
@@ -72,26 +71,26 @@
   color-scheme: dark;
   /* Arkyo — Dark */
   --background: #090909;
-  --foreground: #F5F5F5;
+  --foreground: #f5f5f5;
   --surface: #111111;
   --surface-2: #171717;
   --card: #171717;
-  --card-foreground: #F5F5F5;
+  --card-foreground: #f5f5f5;
   --popover: #171717;
-  --popover-foreground: #F5F5F5;
-  --primary: #F5F5F5;
+  --popover-foreground: #f5f5f5;
+  --primary: #f5f5f5;
   --primary-foreground: #090909;
-  --secondary: #1F1F1F;
-  --secondary-foreground: #F5F5F5;
-  --muted: #1F1F1F;
-  --muted-foreground: #A3A3A3;
-  --accent: #1F1F1F;
-  --accent-foreground: #F5F5F5;
+  --secondary: #1f1f1f;
+  --secondary-foreground: #f5f5f5;
+  --muted: #1f1f1f;
+  --muted-foreground: #a3a3a3;
+  --accent: #1f1f1f;
+  --accent-foreground: #f5f5f5;
   --destructive: oklch(0.6 0.22 27);
-  --destructive-foreground: #FFFFFF;
-  --border: #2A2A2A;
-  --input: #2A2A2A;
-  --ring: #F5F5F5;
+  --destructive-foreground: #ffffff;
+  --border: #2a2a2a;
+  --input: #2a2a2a;
+  --ring: #f5f5f5;
 }
 
 .dark {
@@ -101,29 +100,43 @@
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-  html { color-scheme: light dark; }
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  html {
+    color-scheme: light dark;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "cv02","cv03","cv04","cv11";
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
-  ::selection { background: var(--color-foreground); color: var(--color-background); }
+  ::selection {
+    background: var(--color-foreground);
+    color: var(--color-background);
+  }
 
   /* Theme swap: only the two elements that paint the page-wide surface.
      Component-level transitions stay declared in the components themselves. */
-  html, body {
+  html,
+  body {
     transition-property: background-color, color;
     transition-duration: 250ms;
     transition-timing-function: ease;
   }
   @media (prefers-reduced-motion: reduce) {
-    html, body {
+    html,
+    body {
       transition-duration: 0ms;
     }
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -137,7 +150,9 @@
   margin-inline: auto;
   max-width: 1280px;
   padding-inline: 1rem;
-  @media (min-width: 768px) { padding-inline: 1.5rem; }
+  @media (min-width: 768px) {
+    padding-inline: 1.5rem;
+  }
 }
 
 @utility text-balance {

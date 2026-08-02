@@ -4,7 +4,10 @@ import pt from "@/i18n/locales/pt.json";
 import en from "@/i18n/locales/en.json";
 import fr from "@/i18n/locales/fr.json";
 
-const locales = { pt, en, fr } as Record<string, any>;
+const locales = { pt, en, fr } as Record<
+  string,
+  { seo: Record<string, { title: string; description: string }> }
+>;
 
 describe("multilingual metadata", () => {
   for (const [lang, dict] of Object.entries(locales)) {
