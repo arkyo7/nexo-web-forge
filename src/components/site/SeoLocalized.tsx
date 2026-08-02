@@ -24,7 +24,6 @@ function setMeta(selector: string, attr: "name" | "property", key: string, conte
   }
   el.setAttribute("content", content);
 }
-
 function setLink(rel: string, href: string) {
   let el = document.head.querySelector<HTMLLinkElement>(`link[rel="${rel}"]`);
   if (!el) {
@@ -95,4 +94,3 @@ export function SeoLocalized({ page, path }: SeoLocalizedProps) {
 
   return null;
 }
-
