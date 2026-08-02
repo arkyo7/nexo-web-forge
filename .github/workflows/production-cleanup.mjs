@@ -352,7 +352,7 @@ export function Problems() {
               <motion.article
                 key={item.title}
                 variants={reveal}
-                className={`group rounded-2xl border border-border bg-card p-6 ${cardInteraction}`}
+                className={"group rounded-2xl border border-border bg-card p-6 " + cardInteraction}
               >
                 <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-foreground text-background transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105 motion-reduce:transform-none">
                   <Icon className="h-5 w-5" />
@@ -410,7 +410,7 @@ export function Process() {
             <motion.article
               key={step.title}
               variants={reveal}
-              className={`rounded-2xl border border-border bg-card p-8 ${cardInteraction}`}
+              className={"rounded-2xl border border-border bg-card p-8 " + cardInteraction}
             >
               <span className="font-mono text-xs text-muted-foreground">
                 {String(index + 1).padStart(2, "0")}
